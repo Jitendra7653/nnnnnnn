@@ -1,13 +1,14 @@
 from datetime import date as date_
 import datetime
-import os, re
+import os
+import re
 import asyncio
 import random
 from script import *
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 import time
-from pyrogram import Client, filters, enums
-from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup)
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import humanize
 from helper.progress import humanbytes
 from helper.database import botdata, find_one, total_user
@@ -35,13 +36,10 @@ async def start(client, message):
     txt=f"""Hello {message.from_user.mention} \n\n➻ This Is An Advanced And Yet Powerful Rename Bot.\n\n➻ Using This Bot You Can Rename And Change Thumbnail Of Your Files.\n\n➻ You Can Also Convert Video To File Aɴᴅ File To Video.\n\n➻ This Bot Also Supports Custom Thumbnail And Custom Caption.\n\n<b>Bot Is Made By @Jitendra7653</b>"""
     await message.reply_photo(photo=BOT_PIC,
                                 caption=txt,
-                                reply_markup=InlineKeyboardMarkup(
-                                        [[InlineKeyboardButton("📢 Updates", url="https://t.me/all_in_1_tricks"),
-                                        InlineKeyboardButton("💬 Support", url="https://t.me/all_in_1_tricks")],
-                                        [InlineKeyboardButton("🛠️ Help", callback_data='help'),
-				                        InlineKeyboardButton("❤️‍🩹 About", callback_data='about')],
-                                        [InlineKeyboardButton("🧑‍💻 Developer 🧑‍💻", url="https://t.me/Jitendra7653")]
-                                        ]))
+                                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📢 Updates", url="https://t.me/all_in_1_tricks"),
+								    InlineKeyboardButton("💬 Support", url="https://t.me/all_in_1_tricks")],
+								   [InlineKeyboardButton("🛠️ Settings", callback_data='help'),
+								    InlineKeyboardButton("❤️‍🩹 About", callback_data='about')]]))
     return
 
 @Client.on_message((filters.private & (filters.document | filters.audio | filters.video)) | filters.channel & (filters.document | filters.audio | filters.video))
@@ -107,7 +105,6 @@ async def send_doc(client, message):
             await message.reply_text(f"100% Of Daily {humanbytes(limit)} Data Quota Exhausted.\n\n<b>File Size Detected :</b> {humanbytes(file.file_size)}\n<b>Used Daily Limit :</b> {humanbytes(used)}\n\nYou Have Only <b>{humanbytes(remain)}</b> Left On Your Account.\n\nIf U Want To Rename Large File Upgrade Your Plan", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💳 Upgrade", callback_data="my_pl_call")]]))
             return
         if value < file.file_size:
-            
             if STRING:
                 if buy_date == None:
                     await message.reply_text(f" Yᴏᴜ Cᴀɴ'ᴛ Uᴘʟᴏᴀᴅ Mᴏʀᴇ Tʜᴀɴ 2GB Fɪʟᴇ\n\nYᴏᴜʀ Pʟᴀɴ Dᴏᴇsɴ'ᴛ Aʟʟᴏᴡ Tᴏ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tʜᴀᴛ Aʀᴇ Lᴀʀɢᴇʀ Tʜᴀɴ 2GB\n\nUpgrade Yᴏᴜʀ Pʟᴀɴ Tᴏ Rᴇɴᴀᴍᴇ Fɪʟᴇs Lᴀʀɢᴇʀ Tʜᴀɴ 2GB", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💳 Upgrade", callback_data="my_pl_call")]]))
@@ -140,6 +137,6 @@ async def send_doc(client, message):
             await message.reply_text(f"""__Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴᴛ Mᴇ Tᴏ Dᴏ Wɪᴛʜ Tʜɪs Fɪʟᴇ ?__\n\n**Fɪʟᴇ Nᴀᴍᴇ** :- `{filename}`\n**Fɪʟᴇ Sɪᴢᴇ** :- {filesize}\n**DC ID** :- {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("📝 Rᴇɴᴀᴍᴇ", callback_data="rename"),
                   InlineKeyboardButton("✖️ Cᴀɴᴄᴇʟ", callback_data="cancel")]]))
-              
+    
               
               
