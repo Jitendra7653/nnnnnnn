@@ -9,25 +9,22 @@ async def upgrade(bot,update):
 	
 	**🪙 Basic** 
 	Daily  Upload  limit 20GB
-	Price Rs 49  ind /🌎 0.59$  per Month
+	Price Rs 29  ind /🌎 0.59$  per Month
 	
 	**⚡ Standard**
 	Daily Upload limit 50GB
-	Price Rs 99  ind /🌎 1.19$  per Month
+	Price Rs 49  ind /🌎 1.19$  per Month
 	
 	**💎 Pro**
 	Daily Upload limit 100GB
-	Price Rs 179  ind /🌎 2.16$  per Month
+	Price Rs 99  ind /🌎 2.16$  per Month
 	
 	
-	Pay Using Upi I'd `hxbots@sbi`
+	Pay Using Upi I'd `chandra4780@paytm`
 	
 	After Payment Send Screenshots Of 
-        Payment To Admin @Kirodewal"""
-	keybord = InlineKeyboardMarkup([[ 
-        			InlineKeyboardButton("Admin",url = "https://t.me/kirodewal")], 
-        			[InlineKeyboardButton("Phone Pay",url = "https://upayme.vercel.app/Hxbots@sbi"),
-        			InlineKeyboardButton("Paytm Wallet/UPI",url = "https://upayme.vercel.app/Hxbots@sbi")],[InlineKeyboardButton("Cancel",callback_data = "cancel")  ]])
+        Payment To Admin @Jitendra7653"""
+	keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("Admin", url="https://t.me/Jitendra7653")],[InlineKeyboardButton("Cancel", callback_data="cancel")]])
 	await update.message.edit(text = text,reply_markup = keybord)
 	
 
@@ -39,35 +36,20 @@ async def upgradecm(bot,message):
 	
 	**🪙 Basic** 
 	Daily  Upload  limit 20GB
-	Price Rs 49  ind /🌎 0.59$  per Month
+	Price Rs 29  ind /🌎 0.59$  per Month
 	
 	**⚡ Standard**
 	Daily Upload limit 50GB
-	Price Rs 99  ind /🌎 1.19$  per Month
+	Price Rs 49  ind /🌎 1.19$  per Month
 	
 	**💎 Pro**
 	Daily Upload limit 100GB
-	Price Rs 179  ind /🌎 2.16$  per Month
+	Price Rs 99  ind /🌎 2.16$  per Month
 	
 	
-	Pay Using Upi I'd `HxBots@sbi`
+	Pay Using Upi I'd `chandra4780@paytm`
 	
 	After Payment Send Screenshots Of 
-        Payment To Admin @Kirodewal"""
-	keybord = InlineKeyboardMarkup([[ 
-        			InlineKeyboardButton("Admin",url = "https://t.me/kirodewal")], 
-        			[InlineKeyboardButton("Phone Pay",url = "https://upayme.vercel.app/Hxbots@sbi"),
-        			InlineKeyboardButton("Paytm Wallet/UPI",url = "https://upayme.vercel.app/Hxbots@sbi")],[InlineKeyboardButton("Cancel",callback_data = "cancel")  ]])
-	await message.reply_text(text = text,reply_markup = keybord)
-
-
-
-
-
-
-
-
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Developer @JishuDeveloper
+        Payment To Admin @Jitendra7653"""
+	keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("Admin", url="https://t.me/Jitendra7653")],[InlineKeyboardButton("Cancel", callback_data="cancel")]])
+	await update.message.edit(text = text,reply_markup = keybord)
