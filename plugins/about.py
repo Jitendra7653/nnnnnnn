@@ -1,5 +1,6 @@
 import os 
 from pyrogram import Client, filters
+from config import *
 token = BOT_TOKEN
 botid = token.split(':')[0]
 from helper.database import botdata, find_one, total_user
